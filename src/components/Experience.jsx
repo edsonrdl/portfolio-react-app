@@ -1,5 +1,5 @@
 import React from 'react';
-import { history, skillsList } from '../data/portfolioData';
+import { history, skillsList, softSkillsList } from '../data/portfolioData';
 
 const Experience = () => {
   return (
@@ -49,6 +49,23 @@ const Experience = () => {
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px' }}>
               {skillsList.map((skill, idx) => (
                 <div key={idx} className="skill-tag">
+                  {skill}
+                </div>
+              ))}
+            </div>
+         </div>
+      </div>
+
+      <div className="modern-grid" style={{ marginBottom: '100px' }}>
+         <div style={{ gridColumn: 'span 4' }}>
+            <h2 className="section-title">
+               Soft <span>Skills</span>
+            </h2>
+         </div>
+         <div style={{ gridColumn: 'span 8' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px' }}>
+              {softSkillsList.map((skill, idx) => (
+                <div key={idx} className="skill-tag" style={{ border: '1px solid var(--primary)', color: 'var(--primary)', background: 'transparent' }}>
                   {skill}
                 </div>
               ))}
