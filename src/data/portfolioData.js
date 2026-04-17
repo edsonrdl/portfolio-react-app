@@ -111,13 +111,67 @@ export const history = {
 };
 
 export const skillsList = [
-  "Java (8 ao 21)", "Spring Framework", "C# & .NET Core", "Node.js", "Python",
-  "Angular (13, 18)", "React Native", "TypeScript",
-  "Clean Architecture", "Hexagonal Architecture", "Microserviços", "DDD", "SOLID",
-  "Apache Kafka", "RabbitMQ", "Kafka Connect", "CQRS", "Serverless",
-  "AWS (Lambda, Glue, SNS, SQS)", "Terraform (IaC)", "Docker & Kubernetes", "OpenShift", "ArgoCD",
-  "CI/CD (GitLab, Jenkins, Actions)", "Datadog", "Grafana", "ELK Stack",
-  "PostgreSQL", "DocumentDB", "SQL Server", "MongoDB", "Redis", "Firebase"
+  {
+    category: "Engenharia de Software & Arquitetura",
+    skills: [
+      "Domain-Driven Design (DDD)", 
+      "Clean Architecture", 
+      "Arquitetura Hexagonal", 
+      "Event-Driven Design",
+      "Design Patterns",
+      "Modernização Pragmática (Strangler Fig)",
+      "Monolitos Modulares"
+    ]
+  },
+  {
+    category: "Backend & Ecossistema",
+    skills: [
+      "Java (8 ao 21)", 
+      "Spring Boot", 
+      "C# & .NET Core", 
+      "Python", 
+      "Segurança de APIs"
+    ]
+  },
+  {
+    category: "Cloud & Mensageria Distribuída",
+    skills: [
+      "AWS", 
+      "Amazon MSK, Kafka & Kafka Connect", 
+      "RabbitMQ", 
+      "Amazon SQS/SNS"
+    ]
+  },
+  {
+    category: "Infraestrutura On-Premises & DevOps",
+    skills: [
+      "Proxmox VE", 
+      "ZFS Storage", 
+      "Docker & Kubernetes", 
+      "Terraform (IaC)", 
+      "CI/CD (GitLab, GitHub Actions, ArgoCD)", 
+      "Datadog & ELK Stack"
+    ]
+  },
+  {
+    category: "Frontend & Interfaces Dinâmicas",
+    skills: [
+      "Angular (até v21+)", 
+      "TypeScript", 
+      "React Native", 
+      "Single-Page Applications (SPA)"
+    ]
+  },
+  {
+    category: "Persistência de Dados",
+    skills: [
+      "PostgreSQL", 
+      "DocumentDB", 
+      "SQL Server", 
+      "MongoDB", 
+      "Redis"
+    ]
+  }
 ];
 
 export const softSkillsList = [

@@ -39,20 +39,37 @@ const Experience = () => {
          </div>
       </div>
 
-      <div className="modern-grid" style={{ marginBottom: '100px' }}>
+<div className="modern-grid" style={{ marginBottom: '100px' }}>
          <div style={{ gridColumn: 'span 5', position: 'sticky', top: '100px', height: 'fit-content' }}>
             <h2 className="section-title" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.8rem)', lineHeight: '1.2' }}>
                Conjunto de<br/><span>Tecnologias</span>
             </h2>
          </div>
-         <div style={{ gridColumn: 'span 7' }}>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px' }}>
-              {skillsList.map((skill, idx) => (
-                <div key={idx} className="skill-tag">
-                  {skill}
-                </div>
-              ))}
-            </div>
+         
+         <div style={{ gridColumn: 'span 7', display: 'flex', flexDirection: 'column', gap: '40px' }}>
+            {skillsList.map((categoryBlock, blockIdx) => (
+               <div key={`category-${blockIdx}`} className="skill-category-wrapper">
+                  {/* Título da Categoria */}
+                  <h3 style={{ 
+                     fontSize: '1.2rem', 
+                     fontWeight: '600',
+                     color: 'var(--primary)',
+                     marginBottom: '15px', 
+                     opacity: '0.8' 
+                  }}>
+                     {categoryBlock.category}
+                  </h3>
+                  
+                  {/* Tags das tecnologias daquela categoria */}
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px' }}>
+                     {categoryBlock.skills.map((skill, skillIdx) => (
+                        <div key={`skill-${blockIdx}-${skillIdx}`} className="skill-tag">
+                           {skill}
+                        </div>
+                     ))}
+                  </div>
+               </div>
+            ))}
          </div>
       </div>
 
