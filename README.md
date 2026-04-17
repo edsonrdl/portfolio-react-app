@@ -59,12 +59,12 @@ npm run deploy
 
 Isso irá buildar o projeto e publicar na branch `gh-pages` do seu repositório. Certifique-se de que o repositório está público e que o GitHub Pages está configurado para usar a branch `gh-pages`.
 
-**Nota**: O projeto está configurado com `base: '/portfolio-react-app/'` no `vite.config.js` para funcionar corretamente no subpath do GitHub Pages.
+**Nota**: O projeto está configurado com `base: '/portfolio-app-asi/'` no `vite.config.js` para funcionar corretamente no subpath do GitHub Pages.
 
 ## 📁 Estrutura do Projeto
 
 ```
-portfolio-react-app/
+portfolio-app-asi/
 ├── public/
 │   ├── assets/
 │   │   ├── img/

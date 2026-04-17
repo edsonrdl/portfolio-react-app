@@ -1,5 +1,5 @@
 ﻿
-> portfolio-react-app@0.0.0 build
+> portfolio-app-asi@0.0.0 build
 > vite build
 
 [36mvite v8.0.5 [32mbuilding client environment for production...[36m[39m
