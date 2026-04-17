@@ -15,10 +15,10 @@ const Header = () => {
   return (
     <header className={`header-nav ${scrolled ? 'glass' : ''}`}>
       <div className="header-container">
-        <a href="#" className="logo-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-          <img src={import.meta.env.BASE_URL + 'assets/asi-logo.svg'} alt="Asi" className="logo-icon" style={{ width: '45px', filter: 'drop-shadow(0 0 15px rgba(244,95,144,0.5))', transition: 'all 0.3s ease' }} />
-          <div className="logo-text" style={{ fontSize: '1.5rem', fontWeight: 800, letterSpacing: '2px', textShadow: '0 0 20px rgba(244,95,144,0.4)', color: 'var(--text-main)' }}>
-            ASI<span style={{ color: 'var(--primary)' }}>.</span>
+        <a href="#" className="logo-wrapper">
+          <img src={import.meta.env.BASE_URL + 'assets/asi-logo.svg'} alt="Asi" className="logo-icon" />
+          <div className="logo-text">
+            ASI<span>.</span>
           </div>
         </a>
 
@@ -32,8 +32,14 @@ const Header = () => {
           </ul>
         </nav>
         
-        <button className="btn-outline mobile-menu-btn" style={{ padding: '8px', border: 'none', color: 'var(--primary)', fontWeight: 'bold' }} onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-           {mobileMenuOpen ? "[ X ]" : "[ MENU ]"}
+        <button
+          className="btn-outline mobile-menu-btn"
+          aria-label={mobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+          aria-expanded={mobileMenuOpen}
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          <span className="mobile-menu-icon">{mobileMenuOpen ? '✕' : '☰'}</span>
+          <span className="mobile-menu-text">{mobileMenuOpen ? 'Fechar' : 'Menu'}</span>
         </button>
       </div>
 
