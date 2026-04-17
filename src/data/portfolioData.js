@@ -147,7 +147,7 @@ export const projects = [
   {
     id: "crud-clean",
     type: "System Design",
-    title: "Arquitetura Global de Autenticação",
+    title: "Clean Architecture",
     description: "Laboratório de engenharia abordando segregação por Clean Architecture e camada de Cache para resiliência massiva.",
     status: "Concluído",
     images: ["/assets/projects/crud-clean-architecture-patterns-dao/img-clean-architecture.png"],
