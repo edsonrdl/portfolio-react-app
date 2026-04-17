@@ -3,14 +3,14 @@
   position: fixed;
   top: 0; width: 100%;
   z-index: 100;
-  padding: 24px 0;
+  padding: var(--space-md) 0;
   transition: all var(--transition-normal);
 }
 
 .header-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 var(--space-lg);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,13 +18,13 @@
 
 .nav-links {
   display: flex;
-  gap: 40px;
+  gap: var(--space-lg);
 }
 
 .nav-link {
   font-family: var(--font-display);
-  font-size: 0.8rem;
-  letter-spacing: 2px;
+  font-size: var(--text-sm);
+  letter-spacing: var(--letter-spacing-normal);
   text-transform: uppercase;
   color: var(--text-dark);
   transition: color var(--transition-fast);
@@ -37,9 +37,9 @@
 /* Estilo novo para Títulos de Seção Minimalistas */
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: var(--text-xl);
   text-transform: uppercase;
-  margin-bottom: 80px;
+  margin-bottom: var(--space-xl);
   position: relative;
 }
 
@@ -61,14 +61,14 @@
 .modern-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 40px;
+  gap: var(--space-lg);
 }
 
 /* Modificação no Grid de Portfolio */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 40px;
+  gap: var(--space-lg);
 }
 
 .project-card {
@@ -76,7 +76,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 40px;
+  padding: var(--space-lg);
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -130,38 +130,57 @@
 
 .project-type {
   font-family: var(--font-display);
-  font-size: 0.7rem;
-  letter-spacing: 3px;
+  font-size: var(--text-xs);
+  letter-spacing: var(--letter-spacing-wide);
   color: var(--primary);
-  margin-bottom: 10px;
+  margin-bottom: var(--space-xs);
 }
 
 .project-title {
-  font-size: 2rem;
+  font-size: var(--text-lg);
   font-weight: 700;
-  margin-bottom: 15px;
-  line-height: 1.2;
+  margin-bottom: var(--space-sm);
+  line-height: var(--line-height-snug);
 }
 
 .tech-badge {
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255,255,255,0.1);
-  padding: 6px 14px;
+  padding: calc(var(--space-xs) / 2) var(--space-sm);
   border-radius: var(--radius-pill);
-  font-size: 0.8rem;
+  font-size: var(--text-sm);
   color: var(--text-main);
-  margin-right: 8px;
-  margin-bottom: 8px;
+  margin-right: var(--space-xs);
+  margin-bottom: var(--space-xs);
   display: inline-block;
+}
+
+/* Container para tech badges */
+.tech-container {
+  margin-bottom: var(--space-md);
+}
+
+/* Descrição do projeto */
+.project-description {
+  color: var(--text-dark);
+  margin-bottom: var(--space-md);
+  opacity: 0.8;
+}
+
+/* Botões do projeto */
+.project-buttons {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
 }
 
 /* Skills/Tags minimalistas */
 .skill-tag {
   font-family: var(--font-display);
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  padding: 15px 30px;
+  font-size: var(--text-sm);
+  letter-spacing: calc(var(--letter-spacing-normal) / 2);
+  padding: var(--space-sm) calc(var(--space-lg) * 0.75);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-pill);
   transition: all var(--transition-normal);
@@ -332,7 +351,7 @@
   .nav-links { display: none; }
   .mobile-menu-btn { display: block; }
   .section-container { padding: 80px 20px; }
-  .section-title { font-size: clamp(1.8rem, 4vw, 3rem); margin-bottom: 50px; }
+  .section-title { font-size: clamp(1.8rem, 4vw, 3rem); margin-bottom: calc(var(--space-xl) * 0.625); }
   .glass-card { padding: 25px; }
 }
 

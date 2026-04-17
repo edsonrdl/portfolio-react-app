@@ -36,18 +36,18 @@ const Portfolio = () => {
               <div className="project-type">{project.type}</div>
               <h3 className="project-title">{project.title}</h3>
               
-              <div style={{ marginBottom: '24px' }}>
+              <div className="tech-container">
                 {project.techs.slice(0, 4).map((tech, idx) => (
                   <span key={idx} className="tech-badge">{tech}</span>
                 ))}
                 {project.techs.length > 4 && <span className="tech-badge">+{project.techs.length - 4}</span>}
               </div>
 
-              <p style={{ color: 'var(--text-dark)', marginBottom: '24px', opacity: 0.8 }}>
+              <p className="project-description">
                 {project.description.slice(0, 100)}...
               </p>
 
-              <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
+              <div className="project-buttons">
                 {(project.video || (project.images && project.images.length > 0)) && (
                   <button 
                     onClick={() => setActiveMediaProj(project)}
