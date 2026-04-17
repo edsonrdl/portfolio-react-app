@@ -78,11 +78,11 @@ const Portfolio = () => {
             <button className="modal-close" onClick={() => setActiveMediaProj(null)}>&times;</button>
             <div className="modal-body">
               {activeMediaProj.video ? (
-                <video src={activeMediaProj.video} controls autoPlay className="modal-media-element" />
+                <video src={import.meta.env.BASE_URL + activeMediaProj.video.slice(1)} controls autoPlay className="modal-media-element" />
               ) : activeMediaProj.images && activeMediaProj.images.length > 0 ? (
                 <div className="modal-gallery">
                   {activeMediaProj.images.map((img, i) => (
-                    <img key={i} src={img} alt={`Screenshot ${i}`} className="modal-media-element gallery-img" />
+                    <img key={i} src={import.meta.env.BASE_URL + img.slice(1)} alt={`Screenshot ${i}`} className="modal-media-element gallery-img" />
                   ))}
                 </div>
               ) : null}
