@@ -33,11 +33,11 @@ const Hero = () => {
 
         </p>
 
-        <div style={{ display: 'flex', gap: '24px', animation: 'fadeIn 2s ease-out forwards' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '24px', animation: 'fadeIn 2s ease-out forwards' }}>
           <a href="#portfolio" className="btn btn-primary">
             Explorar Obras [ ↓ ]
           </a>
-          <div style={{ display: 'flex', gap: '15px' }}>
+          <div style={{ display: 'flex', gap: '15px', justifyContent: 'center' }}>
             <a href={profile.contacts.github} target="_blank" rel="noreferrer" className="btn btn-outline" style={{ padding: '16px', borderRadius: '50px' }}>
               GH
             </a>
