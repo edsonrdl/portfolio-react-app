@@ -18,10 +18,13 @@ const Portfolio = () => {
               <video 
                 src={project.video} 
                 className="project-bg-media" 
-                autoPlay 
                 loop 
                 muted 
                 playsInline
+                preload="none"
+                poster={project.images && project.images.length > 0 ? project.images[0] : ""}
+                onMouseEnter={(e) => e.target.play().catch(() => {})}
+                onMouseLeave={(e) => { e.target.pause(); e.target.currentTime = 0; }}
               />
             ) : project.images && project.images.length > 0 ? (
               <img src={project.images[0]} alt={project.title} className="project-bg-media" />
